@@ -1,9 +1,11 @@
 require 'minitest_helper'
 
-class TestKata < MiniTest::Unit::TestCase
-  
+class Kata::RomanNumerals
 
-  def test_it_converts_one_to_I
-    assert_equal 1, Kata::RomanNumerals.convert(1)
+  describe '#convert' do
+    it 'converts 1 to the I' do
+      assert_equal 'I', Kata::RomanNumerals.convert(1)
+    end
   end
+
 end
