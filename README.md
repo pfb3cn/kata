@@ -1,31 +1,36 @@
-# Kata
+# Roman Numeral Kata
 
-TODO: Write a gem description
+The Romans wrote their numbers using letters; specifically the letters:
 
-## Installation
+- I = 1
+- V = 5
+- X = 10
+- L = 50
+- C = 100
+- D = 500
+- M = 1000 
 
-Add this line to your application's Gemfile:
+There were certain rules that the numerals followed which should be observed:
+- The symbols 'I', 'X', 'C', and 'M' can be repeated at most 3 times in a row. 
+- The symbols 'V', 'L', and 'D' can never be repeated. 
+- The '1' symbols ('I', 'X', and 'C') can only be subtracted from the 2 next highest values ('IV' and 'IX', 'XL' and 'XC', 'CD' and 'CM'). 
+-Only one subtraction can be made per numeral ('XC' is allowed, 'XXC' is not). The '5' symbols ('V', 'L', and 'D') can never be subtracted.
 
-```ruby
-gem 'kata'
-```
+Examples:
+- 1 = I
+- 9 = IX
+- 2017 = MMXVII
 
-And then execute:
+#### Write a program that converts a number to a Roman Numeral.  I've added the first test for you.
 
-    $ bundle
+### The rules.
 
-Or install it yourself as:
+- Everyone takes a turn
+  - Turn 1 - Write a test
+  - Turn 2 - Make the test work
+  - Turn 3 - Write a test
+  and so on
+  
+ - No cheating.
+ 
 
-    $ gem install kata
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/kata/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
