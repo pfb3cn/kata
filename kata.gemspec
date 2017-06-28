@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Kata::VERSION
   spec.authors       = ["Reena Patel"]
   spec.email         = ["rppatel1007@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{a code kata for the ages}
+  spec.description   = %q{a code kata for roman numerals}
   spec.homepage      = ""
   spec.license       = "MIT"
 
