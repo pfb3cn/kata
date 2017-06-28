@@ -31,6 +31,8 @@ Examples:
   - Turn 3 - Write a test
   and so on
   
+ - If you finish early, do it in reverse.  Enter a roman numeral and get a number back.
+  
  - No cheating.
  
 
