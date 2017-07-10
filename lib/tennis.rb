@@ -2,14 +2,14 @@ require "kata/version"
 
 module Kata
   class Tennis
-    
+
     def initialize(player1Name, player2Name)
       @player1Name = player1Name
       @player2Name = player2Name
       @p1points = 0
       @p2points = 0
     end
-          
+
     def won_point(playerName)
       if playerName == @player1Name
         @p1points += 1
@@ -17,44 +17,45 @@ module Kata
         @p2points += 1
       end
     end
-    
+
     def score
-      result = ""
-      tempScore=0
       if (@p1points==@p2points)
-        result = {
-            0 => "Love-All",
-            1 => "Fifteen-All",
-            2 => "Thirty-All",
-        }.fetch(@p1points, "Deuce")
+        handle_tie
       elsif (@p1points>=4 or @p2points>=4)
-        minusResult = @p1points-@p2points
-        if (minusResult==1)
-          result ="Advantage " + @player1Name
-        elsif (minusResult ==-1)
-          result ="Advantage " + @player2Name
-        elsif (minusResult>=2)
-          result = "Win for " + @player1Name
-        else
-          result ="Win for " + @player2Name
-        end
+        check_for_win
       else
-        (1...3).each do |i|
-          if (i==1)
-            tempScore = @p1points
-          else
-            result+="-"
-            tempScore = @p2points
-          end
-          result += {
-              0 => "Love",
-              1 => "Fifteen",
-              2 => "Thirty",
-              3 => "Forty",
-          }[tempScore]
-        end
+        "#{string_from_score(@p1points)}-#{string_from_score(@p2points)}"
       end
-      result
+    end
+
+    def handle_tie
+      {
+          0 => "Love-All",
+          1 => "Fifteen-All",
+          2 => "Thirty-All",
+      }.fetch(@p1points, "Deuce")
+    end
+
+    def check_for_win
+      minusResult = @p1points-@p2points
+      if (minusResult==1)
+        "Advantage " + @player1Name
+      elsif (minusResult ==-1)
+        "Advantage " + @player2Name
+      elsif (minusResult>=2)
+        "Win for " + @player1Name
+      else
+        "Win for " + @player2Name
+      end
+    end
+
+    def string_from_score(score)
+      {
+          0 => "Love",
+          1 => "Fifteen",
+          2 => "Thirty",
+          3 => "Forty",
+      }[score]
     end
   end
 end
