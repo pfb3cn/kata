@@ -1,38 +1,15 @@
-# Roman Numeral Kata
+# TENNIS!
 
-The Romans wrote their numbers using letters; specifically the letters:
+Your task is to write a “TennisGame” class containing the logic which outputs the correct score as a string for display on the scoreboard. When a player scores a point, it triggers a method to be called on your class letting you know who scored the point. Later, you will get a call “score()” from the scoreboard asking what it should display. This method should return a string with the current score.
 
-- I = 1
-- V = 5
-- X = 10
-- L = 50
-- C = 100
-- D = 500
-- M = 1000 
+You can read more about Tennis scores here which is summarized below:
 
-There were certain rules that the numerals followed which should be observed:
-- The symbols 'I', 'X', 'C', and 'M' can be repeated at most 3 times in a row. 
-- The symbols 'V', 'L', and 'D' can never be repeated. 
-- The '1' symbols ('I', 'X', and 'C') can only be subtracted from the 2 next highest values ('IV' and 'IX', 'XL' and 'XC', 'CD' and 'CM'). 
--Only one subtraction can be made per numeral ('XC' is allowed, 'XXC' is not). The '5' symbols ('V', 'L', and 'D') can never be subtracted.
+1. A game is won by the first player to have won at least four points in total and at least two points more than the opponent.
+2. The running score of each game is described in a manner peculiar to tennis: scores from zero to three points are described as "Love", "Fifteen", "Thirty", and "Forty" respectively.
+3. If at least three points have been scored by each player, and the scores are equal, the score is "Deuce".
+4.  If at least three points have been scored by each side and a player has one more point than his opponent, the score of the game is "Advantage" for the player in the lead
 
-Examples:
-- 1 = I
-- 9 = IX
-- 2017 = MMXVII
-
-#### Write a program that converts a number to a Roman Numeral.  I've added the first test for you.
-
-### The rules.
-
-- Everyone takes a turn
-  - Turn 1 - Write a test
-  - Turn 2 - Make the test work
-  - Turn 3 - Write a test
-  and so on
-  
- - If you finish early, do it in reverse.  Enter a roman numeral and get a number back.
-  
- - No cheating.
+You need only report the score for the current game. Sets and Matches are out of scope.
  
 
+### REFACTOR THE CODE!  MOB STYLE!!
